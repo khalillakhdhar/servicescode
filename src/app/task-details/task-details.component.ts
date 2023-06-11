@@ -13,7 +13,7 @@ export class TaskDetailsComponent {
 constructor(private  route: ActivatedRoute,private taskService: TaskService)
 {
 this.id=parseInt(this.route.snapshot.paramMap.get("index")||"",10);
-this.task=taskService.getTask(this.id);
+this.task=this.taskService.getTask(this.id);
 }
 
 }
